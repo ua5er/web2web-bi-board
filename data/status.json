@@ -1,0 +1,37 @@
+{
+ "run_at": "2026-10-21T20:24:00.000Z",
+ "ok": true,
+ "demo": true,
+ "stale": [],
+ "note": "Demo status: the board ships with synthetic data, no live sources are connected.",
+ "sources": {
+  "ads": {
+   "ok": true,
+   "stale": false,
+   "updated_at": "2026-10-21T20:24:00.000Z",
+   "error": null,
+   "note": "demo"
+  },
+  "analytics": {
+   "ok": true,
+   "stale": false,
+   "updated_at": "2026-10-21T20:24:00.000Z",
+   "error": null,
+   "note": "demo"
+  },
+  "payments": {
+   "ok": true,
+   "stale": false,
+   "updated_at": "2026-10-21T20:24:00.000Z",
+   "error": null,
+   "note": "demo"
+  },
+  "product_db": {
+   "ok": true,
+   "stale": false,
+   "updated_at": "2026-10-21T20:24:00.000Z",
+   "error": null,
+   "note": "demo"
+  }
+ }
+}
