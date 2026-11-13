@@ -2,3 +2,6 @@
 node_modules/
 *.log
 /tmp/
+
+# local LinkedIn launch drafts and slides (not part of the product)
+docs/linkedin/
