@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+type: software
+title: "Web-to-Web BI Board"
+abstract: "Open-source BI dashboard for subscription web funnels (web-to-web): cohort ROAS and payback from D0 to D360, sBG LTV and ROAS predictions, real-time ad spend monitoring and a funnel map. Static site, no backend, runs on a documented JSON data contract."
+version: 1.0.0
+date-released: 2026-11-13
+authors:
+  - given-names: Vlad
+    family-names: Yasinski
+    alias: ua5er
+    website: "https://www.roimobi.com"
+repository-code: "https://github.com/ua5er/web2web-bi-board"
+url: "https://ua5er.github.io/web2web-bi-board/"
+license: MIT
+keywords:
+  - bi-dashboard
+  - cohort-analysis
+  - roas
+  - ltv
+  - ltv-prediction
+  - subscription-analytics
+  - web2web
+  - marketing-analytics

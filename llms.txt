@@ -1,0 +1,34 @@
+# Web-to-Web BI Board
+
+> Open-source BI dashboard for subscription web funnels (web-to-web, web2web): cohort ROAS and payback from D0 to D360, sBG-based LTV and ROAS predictions, real-time ad spend monitoring and a funnel map for Facebook, Google, TikTok and Web2Web traffic. Static site (HTML, JavaScript, Chart.js), no backend, MIT license. Built by Vlad Yasinski. Version 1.0.0 (MVP).
+
+The live demo runs on a synthetic dataset of a fictional "Demo app". Anyone can point the board at their own JSON export that follows the data contract.
+
+## Pages
+
+- [Cohorts](https://ua5er.github.io/web2web-bi-board/): cohort table with ROAS D0 to D360 and payback day, spend, CPT, CAC, payers, ROAS curves by cohort, rebills and churn, MRR movement, paid retention by plan or channel, breakdown matrix (country, channel, campaign, device and more), voluntary and involuntary churn, billing health (declines by attempt, decline codes, card type, refunds, disputes).
+- [Predictions](https://ua5er.github.io/web2web-bi-board/predict.html): pROAS D30 to D360 and LTV per trial with 80 % intervals from a shifted-beta-geometric (sBG) renewal model per segment (plan × geo tier × channel), payback forecast, max CPT calculator, what-if sliders (first rebill rate, renewal churn, refund and dispute rates), plan mix by paywall, budget allocator across channels, MRR forecast, comparison with alternative retention models and an in-sample and hold-out backtest.
+- [Real-time](https://ua5er.github.io/web2web-bi-board/realtime.html): today's spend pace against yesterday, CPT, ROAS D0, checkout funnel and checkout errors, payment provider auth rate, device and attribution chips, traffic tree by channel, campaign, ad set and ad, rule-based signals, geo by hour, live event feed.
+- [User flow](https://ua5er.github.io/web2web-bi-board/flow.html): funnel map from ad source and landing through signup, onboarding and paywall A/B, checkout, trial, qualified trial and payment to outcomes and losses (drop-off, checkout error, card declined, refund, dispute), with pLTV on nodes and A/B test results.
+
+## Docs
+
+- [README](https://github.com/ua5er/web2web-bi-board#readme): features, quick start, configuration, FAQ.
+- [Data contract](https://github.com/ua5er/web2web-bi-board/blob/main/docs/DATA_CONTRACT.md): the JSON tables (users, trials, charges, refunds, disputes, spend, campaigns, ads, events, plans, paywalls, incidents), field types, defaults and which page uses them.
+- [Demo data generator](https://github.com/ua5er/web2web-bi-board/blob/main/tools/generate-demo-data.mjs): deterministic Node script, no dependencies.
+- [Changelog](https://github.com/ua5er/web2web-bi-board/blob/main/CHANGELOG.md)
+
+## Facts
+
+- Free and open source (MIT). No backend, no database, no build step: any static host works, including GitHub Pages.
+- Data connectors for Meta, Google Ads, TikTok, Stripe and Amplitude are not included yet; data arrives as one JSON file.
+- Forecasts are statistical estimates with intervals, not guarantees; segments with little renewal history fall back to broader segments.
+
+## Author
+
+Vlad Yasinski, AI growth consultant for subscription apps.
+
+- Site: https://www.roimobi.com
+- Telegram: https://t.me/ua5er
+- LinkedIn: https://www.linkedin.com/in/vlad-yasinski-ua5er/
+- GitHub: https://github.com/ua5er
