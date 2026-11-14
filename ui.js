@@ -194,17 +194,17 @@
   /* ------------------------------------------------------------------ brand (board.config.js)
      Logo and favicon = the author's GitHub avatar (https://github.com/<github>.png?size=128), loaded live; initials monogram when it fails.
      Contact links (Telegram, LinkedIn, GitHub, site) come from the same config; nothing else is linked. */
-  const BRAND_DEFAULT = { title: 'Web-to-Web BI Board', tagline: '', version: '1.0.0', stage: 'MVP', author: 'Vlad Yasinski', github: 'ua5er', telegram: 'ua5er', linkedin: 'https://www.linkedin.com/in/vlad-yasinski-ua5er/', site: 'https://www.roimobi.com' };
+  const BRAND_DEFAULT = { title: 'Web-to-Web BI Board', tagline: '', version: '1.0.0', stage: 'MVP', author: 'Vlad Yasinski', github: 'ua5er', telegram: 'ua5er', linkedin: 'https://www.linkedin.com/in/vlad-yasinski-ua5er/', site: 'https://www.roimobi.com', telegramUrl: '', siteUrl: '' };
   const brand = Object.assign({}, BRAND_DEFAULT, window.BOARD_CONFIG || {});
   const initials = (name) => String(name || '').split(/\s+/).filter(Boolean).slice(0, 2).map((w) => w[0].toUpperCase()).join('') || 'BB';
   const avatarUrl = () => (brand.github ? `https://github.com/${encodeURIComponent(brand.github)}.png?size=128` : null);
   const hostOf = (u) => String(u || '').replace(/^https?:\/\//, '').replace(/^www\./, '').replace(/\/$/, '');
   brand.versionLabel = 'v' + brand.version + (brand.stage ? ' ' + brand.stage : '');
   brand.links = [
-    brand.telegram ? { id: 'telegram', label: 'Telegram', text: 't.me/' + brand.telegram, href: 'https://t.me/' + brand.telegram } : null,
+    brand.telegram ? { id: 'telegram', label: 'Telegram', text: 't.me/' + brand.telegram, href: brand.telegramUrl || ('https://t.me/' + brand.telegram) } : null,
     brand.linkedin ? { id: 'linkedin', label: 'LinkedIn', text: 'LinkedIn', detail: String(brand.linkedin).replace(/^https?:\/\/(www\.)?linkedin\.com\//, '').replace(/\/$/, ''), href: brand.linkedin } : null,
     brand.github ? { id: 'github', label: 'GitHub', text: 'github.com/' + brand.github, href: 'https://github.com/' + brand.github } : null,
-    brand.site ? { id: 'site', label: T('Website'), text: hostOf(brand.site), href: brand.site } : null,
+    brand.site ? { id: 'site', label: T('Website'), text: hostOf(brand.site), href: brand.siteUrl || brand.site } : null,
   ].filter(Boolean);
   const pageTitle = (t) => (t ? t + ' · ' : '') + brand.title;
   /* the static English <title> of each page is written for search; other languages get "<page> · <title>" */

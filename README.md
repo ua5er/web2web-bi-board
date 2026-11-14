@@ -12,7 +12,7 @@ Web-to-Web BI Board is an open-source BI dashboard for subscription web funnels 
 <p align="center">
   <a href="https://ua5er.github.io/web2web-bi-board/"><img src="docs/media/demo.gif" alt="Web-to-Web BI Board demo: cohorts, predictions with what-if sliders, real-time and user flow pages" width="880"></a>
   <br>
-  <sub><a href="https://ua5er.github.io/web2web-bi-board/"><b>Open the live demo</b></a> · <a href="docs/media/demo.mp4">Demo video (MP4)</a> · <a href="docs/DATA_CONTRACT.md">Data contract</a> · <a href="https://t.me/ua5er">Message the author on Telegram</a></sub>
+  <sub><a href="https://ua5er.github.io/web2web-bi-board/"><b>Open the live demo</b></a> · <a href="docs/media/demo.mp4">Demo video (MP4)</a> · <a href="docs/DATA_CONTRACT.md">Data contract</a> · <a href="https://www.roimobi.com/tg?src=github-bi-board">Message the author on Telegram</a></sub>
 </p>
 
 A subscription business that sells on the web pays for traffic today and gets paid back over weeks and months of renewals. This board answers the questions a growth team asks every day: which cohorts and channels pay back and when, what a trial is worth before the renewals arrive, how much you can afford per trial, whether today's traffic is healthy, and where users are lost between the ad click and the second payment. It ships with a synthetic demo dataset for a fictional "Demo app", and it runs on your own data once you export it to one JSON file.
@@ -126,14 +126,16 @@ window.BOARD_CONFIG = {
   stage: 'MVP',
   author: 'Vlad Yasinski',
   github: 'ua5er',
-  telegram: 'ua5er',
+  telegram: 'ua5er',                      // visible handle
+  telegramUrl: 'https://www.roimobi.com/tg?src=bi-board-demo', // where the Telegram links go; empty = https://t.me/<telegram>
   linkedin: 'https://www.linkedin.com/in/vlad-yasinski-ua5er/',
   site: 'https://www.roimobi.com',
+  siteUrl: 'https://www.roimobi.com/?utm_source=bi-board-demo&utm_medium=demo&utm_campaign=web2web-bi-board', // empty = `site`
 };
 ```
 
 - **Logo and favicon** are loaded live from `https://github.com/<github>.png?size=128`, so they change when the GitHub avatar changes. If the avatar cannot be loaded, the initials of `author` are shown instead.
-- The **Contact the author** button and the footer on every page use `telegram`, `linkedin`, `github` and `site`.
+- The **Contact the author** button and the footer on every page use `telegram`, `linkedin`, `github` and `site`. `telegramUrl` and `siteUrl` set where the Telegram and website links point (the visible text stays `t.me/<telegram>` and the site host). Set both to empty strings to link straight to `t.me/<telegram>` and `site`.
 - The plan catalogue, channels, metrics and dimensions are defined in `core.js`; a data file can bring its own plan catalogue.
 - Language: English by default, Russian with the EN / RU switch (`i18n/ru.js`). Theme: dark or light, remembered per browser.
 
@@ -159,7 +161,7 @@ Planned, not included in v1.0.0:
 - Offline model files (Cox / random survival forest, ARIMA on MRR) through the existing offline-model hook in `core.js`.
 - More languages for the UI.
 
-Want one of these first, or the board running on your data? [Message me on Telegram](https://t.me/ua5er).
+Want one of these first, or the board running on your data? [Message me on Telegram](https://www.roimobi.com/tg?src=github-bi-board).
 
 ## FAQ
 
@@ -185,18 +187,22 @@ Not in v1.0.0. You export the data into the JSON format; connectors are on the r
 No. `data/demo.json` is synthetic, produced by `tools/generate-demo-data.mjs` for a fictional "Demo app". Every product, campaign, partner, user and payment in it is invented.
 
 **How do I get this board on my own data?**
-Export your data to the contract yourself, or [message me on Telegram](https://t.me/ua5er) and I will help set it up on your data.
+Export your data to the contract yourself, or [message me on Telegram](https://www.roimobi.com/tg?src=github-bi-board) and I will help set it up on your data.
+
+## Privacy
+
+The hosted demo at ua5er.github.io counts anonymous page views and contact clicks with PostHog (EU), without cookies or personal data. It honours Do Not Track and Global Privacy Control. Copies you host yourself send nothing.
 
 ## Author
 
-**Vlad Yasinski**, AI growth consultant for subscription apps ([roimobi.com](https://www.roimobi.com)).
+**Vlad Yasinski**, AI growth consultant for subscription apps ([roimobi.com](https://www.roimobi.com/?utm_source=github&utm_medium=readme&utm_campaign=web2web-bi-board)).
 
-- Telegram: [t.me/ua5er](https://t.me/ua5er)
+- Telegram: [t.me/ua5er](https://www.roimobi.com/tg?src=github-bi-board)
 - LinkedIn: [linkedin.com/in/vlad-yasinski-ua5er](https://www.linkedin.com/in/vlad-yasinski-ua5er/)
 - GitHub: [github.com/ua5er](https://github.com/ua5er)
-- Site: [www.roimobi.com](https://www.roimobi.com)
+- Site: [www.roimobi.com](https://www.roimobi.com/?utm_source=github&utm_medium=readme&utm_campaign=web2web-bi-board)
 
-Built by Vlad Yasinski. Want this board on your data? [Message me on Telegram](https://t.me/ua5er).
+Built by Vlad Yasinski. Want this board on your data? [Message me on Telegram](https://www.roimobi.com/tg?src=github-bi-board).
 
 ## License
 
