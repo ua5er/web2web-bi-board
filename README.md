@@ -3,6 +3,7 @@
   <a href="CHANGELOG.md"><img alt="Version 1.0.0" src="https://img.shields.io/badge/version-1.0.0%20MVP-7170ff.svg"></a>
   <a href="https://ua5er.github.io/web2web-bi-board/"><img alt="Live demo" src="https://img.shields.io/badge/live%20demo-GitHub%20Pages-1baf7a.svg"></a>
   <img alt="Static site, no backend" src="https://img.shields.io/badge/static-no%20backend-3987e5.svg">
+  <a href="https://alternativeto.net/software/web-to-web-bi-board/about/?utm_source=badge&utm_medium=referral"><img alt="Web-to-Web BI Board on AlternativeTo" src="https://alternativeto.net/static/badges/badge-compact-light.svg" height="20"></a>
 </p>
 
 # Web-to-Web BI Board
